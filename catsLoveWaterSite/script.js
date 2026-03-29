@@ -124,7 +124,7 @@ let showingNSFW = false;
                 const img = item.querySelector('img');
                 if (img.src !== img.dataset.src) {
                     img.src = img.dataset.src;
-            });
+            }});
         } else {
             sfwItems.forEach(item => item.classList.remove('btn-hidden'));
 
