@@ -122,9 +122,8 @@ let showingNSFW = false;
             nsfwItems.forEach(item => {
                 item.classList.remove('btn-hidden');
                 const img = item.querySelector('img');
-                if (!img.src) {
+                if (img.src !== img.dataset.src) {
                     img.src = img.dataset.src;
-                }
             });
         } else {
             sfwItems.forEach(item => item.classList.remove('btn-hidden'));
