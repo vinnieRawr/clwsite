@@ -615,21 +615,6 @@ font-size: 1.3rem;
     transform: translateY(12px) scale(1.05);
 }
 
-
-.char-stage .platform {
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 68%;
-    height: 12px;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.18) 60%, rgba(0,0,0,0) 100%);
-    filter: blur(3px);
-    opacity: 0.95;
-    pointer-events: none;
-}
-
 .char-info {
     flex: 1;
     padding: 0.8rem 1rem;
@@ -643,14 +628,7 @@ font-size: 1.3rem;
     font-size: 2rem;
     margin: 0;
 }
-.char-info h3 {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.3rem;
-    margin: 0;
-    font-weight: 600;
-    color: #e8eef8;
-    opacity: 0.95;
-}
+
 .char-info .species {
     margin: 0.25rem 0 0.75rem;
     font-style: italic;
@@ -789,43 +767,12 @@ font-size: 1.3rem;
     height: 398px !important;
     margin-right: -48px;
   }
-.twin-gradient{
-  position: absolute;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  height: 20%;
-  border-radius: 14px 14px 0 0;
-  overflow: hidden;
-}
+
 .DickPic{
   max-width: 320px;
   height: 100%;
 }
-.arno-gradient{
-  width: 50%;
-    background: linear-gradient(
-    to bottom,
-    rgba(166, 31, 31, 0.2) 0%,
-    rgba(255, 0, 150, 0) 120% 
-    ), linear-gradient(
-    to left,
-    rgba(27, 15, 165, 0.2) 0%,
-    rgba(255, 0, 150, 0) 30%
-    );
-}
-.celio-gradient{
-  width: 50%;
-    background: linear-gradient(
-    to bottom,
-    rgba(27, 15, 165, 0.2) 0%,
-    rgba(255, 0, 150, 0) 120%
-    ), linear-gradient(
-    to right,
-    rgba(166, 31, 31, 0.2) 0%,
-    rgba(255, 0, 150, 0) 30%
-    );
-}
+
 .twinspicfix{
   height: 500px !important;
   border-bottom-left-radius: 160px;
@@ -1033,26 +980,6 @@ p.galLongText{
   filter: brightness(0.8);
 }
 
-.fanart-item figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 90%);
-  padding: 0.8rem 1rem;
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.fanart-item:hover figcaption {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* === AUDIO DRAMA === */
 #audiodrama {
   padding: 0rem 0rem 1rem;
@@ -1158,11 +1085,6 @@ p.galLongText{
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   margin: 1rem 0;
-}
-
-.drama-card .desc {
-  font-size: 0.9rem;
-  color: #cfd5df;
 }
 
 .buy-btn {
@@ -1838,10 +1760,6 @@ p.galLongText{
     font-size: 0.8rem;
   }
 
-  .drama-va h2 {
-    font-size: 1rem;
-  }
-
   .nekothx{
     font-size: 0.8rem !important;
   }
@@ -1858,10 +1776,6 @@ p.galLongText{
   }
 }
 @media (max-width: 620px) {
-  .drama-card h3 {
-    font-size: 1rem;
-  }
-
   .about-me-info {
     display: flex;
     flex-direction: column;
