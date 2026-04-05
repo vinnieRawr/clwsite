@@ -57,7 +57,7 @@
     transform: scale(1.02);
 }
 
-#site-content.blurred {
+.blurred {
     pointer-events: none;
     user-select: none;
 }
