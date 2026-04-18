@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "clwsite",
+  "compatibility_date": "2026-04-18",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "catsLoveWaterSite"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
