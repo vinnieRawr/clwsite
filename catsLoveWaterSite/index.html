@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="assets/comic-reader.css">
 </head>
 <body class="scroll-block">
-    <div id="mature-modal" class="modal-popup">
+    <div id="mature-modal" class="modal-popup" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
         <div class="modal-content-popup">
-            <h1>Warning</h1>
+            <h1 id="modal-title">Warning</h1>
             <img src="assets/imgs/woahthere.png" class="celiocop" alt="Woah there!" draggable="false">
-            <p>This site and the comic contain mature content. Proceed only if you are 18 years or older</p>
+            <p id="modal-desc">This site and the comic contain mature content. Proceed only if you are 18 years or older</p>
             <button id="enterBtn" type="button">I am over 18 years old</button>
         </div>
     </div>
-    <div id="site-content" class="blurred">
+    <main id="site-content" class="blurred">
     <section id="home" class="home-hero">
     <div class="hero-viewport">
     <div class="img-carousel">
@@ -31,8 +31,8 @@
                     <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw1.webp" alt="chap1" draggable="false" fetchpriority="high"></div>
                     <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw2.webp" alt="chap2" draggable="false" fetchpriority="high"></div>
                     <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw3.webp" alt="chap3" draggable="false" fetchpriority="high"></div>
-                    <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw4.webp" alt="chap4" draggable="false" etchpriority="high"></div>
-                    <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw5.webp" alt="chap5" draggable="false" etchpriority="high"></div>
+                    <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw4.webp" alt="chap4" draggable="false" fetchpriority="high"></div>
+                    <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw5.webp" alt="chap5" draggable="false" fetchpriority="high"></div>
                     <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw6.webp" alt="chap6" draggable="false" loading="lazy"></div>
                     <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw7.webp" alt="chap7" draggable="false" loading="lazy"></div>
                     <div class="carousel-card"><img class="carimg" src="assets/imgs/comic/covers/clw8.webp" alt="chap8" draggable="false" loading="lazy"></div>
@@ -161,10 +161,10 @@
         </header>
         <div class="chars-grid">
             <article class="char-card Twins" aria-labelledby="Arno-and-Celio">
-                <div class="char-left Twins">
+                <div class="char-desc Twins">
                 <div class="char-img-wrap">
                     <figure class="char-stage">
-                        <img src="assets/imgs/characters/twinsref.webp" alt="The Twins Arno and Celio" loading="lazy" class="twinspicfix">
+                    <img src="assets/imgs/characters/twinsref.webp" alt="The Twins Arno and Celio" loading="lazy" id="twinspicfix">
                     </figure>
                 </div>
                 <div class="char-info">
@@ -177,23 +177,50 @@
                         often leads the pair down troublesome, and perilous paths...</p>
                 </div>
                 </div>
-                <div class="char-right">
-                    <div class="infobox twininfo">
-                        <p>Age: <span class="infoLight">25</span></p>
-                        <p>Birthday: <span class="infoLight">November 15th</span></p>
-                        <p>Height: <span class="infoLight">175cm</span></p>
-                        <p>Weight: <span class="infoLight">70-75kg</span></p>
-                        <p>Accent: <span class="infoLight">Italian</span></p>
-                        <p>Career: <span class="infoLight">Physical Education</span></p>
-                        <p>Interested in: <span class="infoLight">All genders</span></p>
-                        <p>Knows how to swim: <span class="infoLight">Yes</span></p>
-                        <p> D-size: <span class="infoLight">25cm/9.8″</span></p>
-                    </div>
+                <div class="char-attr">
+                    <dl class="infobox">
+                        <div>
+                            <dt>Age:</dt>
+                            <dd><span class="infoLight">25</span></dd>
+                        </div>
+                        <div>
+                            <dt>Birthday:</dt>
+                            <dd><span class="infoLight">November 15th</span></dd>
+                        </div>
+                        <div>
+                            <dt>Height:</dt>
+                            <dd><span class="infoLight">175 cm</span></dd>
+                        </div>
+                        <div>
+                            <dt>Weight:</dt>
+                            <dd><span class="infoLight">70-75 kg</span></dd>
+                        </div>
+                        <div>
+                            <dt>Accent:</dt>
+                            <dd><span class="infoLight">Italian</span></dd>
+                        </div>
+                        <div>
+                            <dt>Career</dt>
+                            <dd><span class="infoLight">Physical Education</span></dd>
+                        </div>
+                        <div>
+                            <dt>Interested in:</dt>
+                            <dd><span class="infoLight">All genders</span></dd>
+                        </div>
+                        <div>
+                            <dt>Knows how to swim:</dt>
+                            <dd><span class="infoLight">Yes</span></dd>
+                        </div>
+                        <div>
+                            <dt>D-size</dt>
+                            <dd><span class="infoLight">25 cm / 9.8″</span></dd>
+                        </div>
+                    </dl>
                     <div class="dpic"><img class="DickPic" src="assets/imgs/characters/DPics/twinsPic.webp" alt="Arno's and Celio's dick" loading="lazy"></div>
                 </div>
             </article>
             <article class="char-card Dick" aria-labelledby="Dick">
-                <div class="char-left Dick">
+                <div class="char-desc Dick">
                 <div class="char-img-wrap">
                     <figure class="char-stage DickStage">
                         <img src="assets/imgs/characters/dick.webp" alt="Dick" loading="lazy" class="dickpic">
@@ -207,25 +234,49 @@
                         Celio wants to hunt him down and teach him who's boss</p>
                 </div>
                 </div>
-                <div class="char-right">
-                    <div class="infobox dickinfo nextToTwins">
-                        <p>Age: <span class="infoLight">23</span></p>
-                        <p>Birthday: <span class="infoLight">December 1st</span></p>
-                        <p>Height: <span class="infoLight">170cm</span></p>
-                        <p>Weight: <span class="infoLight">65-70kg</span></p>
-                        <p>Career: <span class="infoLight">Employee/Unkown</span></p>
-                        <p>Interested in: <span class="infoLight">Figuring it out</span></p>
-                        <p>Knows how to swim: <span class="infoLight">No</span></p>
-                        <p> D-size: <span class="infoLight">13cm/3.9″</span></p>
-                    </div>
+                <div class="char-attr">
+                    <dl class="infobox dickinfo">
+                        <div>
+                            <dt>Age:</dt>
+                            <dd><span class="infoLight">23</span></dd>
+                        </div>
+                        <div>
+                            <dt>Birthday:</dt>
+                            <dd><span class="infoLight">December 1st</span></dd>
+                        </div>
+                        <div>
+                            <dt>Height:</dt>
+                            <dd><span class="infoLight">170 cm</span></dd>
+                        </div>
+                        <div>
+                            <dt>Weight:</dt>
+                            <dd><span class="infoLight">65-70 kg</span></dd>
+                        </div>
+                        <div>
+                            <dt>Career</dt>
+                            <dd><span class="infoLight">Employee / Unkown</span></dd>
+                        </div>
+                        <div>
+                            <dt>Interested in:</dt>
+                            <dd><span class="infoLight">Figuring it out</span></dd>
+                        </div>
+                        <div>
+                            <dt>Knows how to swim:</dt>
+                            <dd><span class="infoLight">No</span></dd>
+                        </div>
+                        <div>
+                            <dt>D-size</dt>
+                            <dd><span class="infoLight">13 cm / 3.9″</span></dd>
+                        </div>
+                    </dl>
                     <div class="dpic"><img class="DickPic" src="assets/imgs/characters/DPics/dickPic.webp" alt="Dick's dick" loading="lazy"></div>
                 </div>
             </article>
             <article class="char-card Cato" aria-labelledby="Cato">
-                <div class="char-left Cato">
+                <div class="char-desc Cato">
                 <div class="char-img-wrap">
                     <figure class="char-stage">
-                        <img src="assets/imgs/characters/cato.webp" alt="Cato" class="catopicfix" loading="lazy">
+                        <img src="assets/imgs/characters/cato.webp" alt="Cato" id="catopicfix" loading="lazy">
                     </figure>
                 </div>
                 <div class="char-info">
@@ -236,26 +287,53 @@
                         He's shown a strong attraction to Arno, which has been eagerly, albeit coyly reciprocated</p>
                 </div>
             </div>
-            <div class="char-right">
-                    <div class="infobox catoinfo">
-                        <p>Age: <span class="infoLight">25</span></p>
-                        <p>Birthday: <span class="infoLight">June 13th</span></p>
-                        <p>Height: <span class="infoLight">165cm</span></p>
-                        <p>Weight: <span class="infoLight">60-65kg</span></p>
-                        <p>Accent: <span class="infoLight">Latin American</span></p>
-                        <p>Career: <span class="infoLight">Singer/Cruise Entertainer</span></p>
-                        <p>Interested in: <span class="infoLight">Men</span></p>
-                        <p>Knows how to swim: <span class="infoLight">No</span></p>
-                        <p> D-size: <span class="infoLight">20cm/7.8″</span></p>
-                    </div>
+            <div class="char-attr">
+                    <dl class="infobox">
+                        <div>
+                            <dt>Age:</dt>
+                            <dd><span class="infoLight">25</span></dd>
+                        </div>
+                        <div>
+                            <dt>Birthday:</dt>
+                            <dd><span class="infoLight">June 13th</span></dd>
+                        </div>
+                        <div>
+                            <dt>Height:</dt>
+                            <dd><span class="infoLight">165 cm</span></dd>
+                        </div>
+                        <div>
+                            <dt>Weight:</dt>
+                            <dd><span class="infoLight">60-65 kg</span></dd>
+                        </div>
+                        <div>
+                            <dt>Accent:</dt>
+                            <dd><span class="infoLight">Latin American</span></dd>
+                        </div>
+                        <div>
+                            <dt>Career</dt>
+                            <dd><span class="infoLight">Singer / Cruise Entertainer</span></dd>
+                        </div>
+                        <div>
+                            <dt>Interested in:</dt>
+                            <dd><span class="infoLight">Men</span></dd>
+                        </div>
+                        <div>
+                            <dt>Knows how to swim:</dt>
+                            <dd><span class="infoLight">No</span></dd>
+                        </div>
+                        <div>
+                            <dt>D-size</dt>
+                            <dd><span class="infoLight">20 cm / 7.8″</span></dd>
+                        </div>
+                    </dl>
                     <div class="dpic"><img class="DickPic" src="assets/imgs/characters/DPics/catoPic.webp" alt="Cato's dick" loading="lazy"></div>
             </div>
             </article>
             <article class="char-card Reik" aria-labelledby="Reik">
-                <div class="char-left Reik">
+                <div class="char-desc Reik">
                 <div class="char-img-wrap">
                     <figure class="char-stage">
-                        <img src="assets/imgs/characters/reik.webp" class="reikpicfix" alt="Reik" loading="lazy">
+                        <img src="assets/imgs/characters/reik.webp" id="reikpicfix" alt="Reik" loading="lazy">
                     </figure>
                 </div>
                 <div class="char-info">
@@ -266,24 +344,48 @@
                         He patronizes the twins, but is secretly very fond of them, especially Arno.</p>
                 </div>
                 </div>
-                <div class="char-right">
-                    <div class="infobox accentless">
-                        <p>Age: <span class="infoLight">27</span></p>
-                        <p>Birthday: <span class="infoLight">March 10th</span></p>
-                        <p>Height: <span class="infoLight">210cm</span></p>
-                        <p>Weight: <span class="infoLight">150-200kg</span></p>
-                        <p>Career: <span class="infoLight">Lifeguard</span></p>
-                        <p>Interested in: <span class="infoLight">Men/Women</span></p>
-                        <p>Knows how to swim: <span class="infoLight">Yes</span></p>
-                        <p> D-size: <span class="infoLight">45cm/18.8″</span></p>
-                    </div>
+                <div class="char-attr">
+                    <dl class="infobox accentless">
+                        <div>
+                            <dt>Age:</dt>
+                            <dd><span class="infoLight">27</span></dd>
+                        </div>
+                        <div>
+                            <dt>Birthday:</dt>
+                            <dd><span class="infoLight">March 10th</span></dd>
+                        </div>
+                        <div>
+                            <dt>Height:</dt>
+                            <dd><span class="infoLight">210 cm</span></dd>
+                        </div>
+                        <div>
+                            <dt>Weight:</dt>
+                            <dd><span class="infoLight">150-200 kg</span></dd>
+                        </div>
+                        <div>
+                            <dt>Career</dt>
+                            <dd><span class="infoLight">Lifeguard</span></dd>
+                        </div>
+                        <div>
+                            <dt>Interested in:</dt>
+                            <dd><span class="infoLight">Men / Women</span></dd>
+                        </div>
+                        <div>
+                            <dt>Knows how to swim:</dt>
+                            <dd><span class="infoLight">Yes</span></dd>
+                        </div>
+                        <div>
+                            <dt>D-size</dt>
+                            <dd><span class="infoLight">45 cm / 18.8″</span></dd>
+                        </div>
+                    </dl>
                     <div class="dpic"><img class="DickPic" src="assets/imgs/characters/DPics/reikPic.webp" alt="Reik's dick" loading="lazy"></div>
                 </div>
             </article>
         </div>
         <div class="chars-grid-lower">
             <article class="char-card Erik" aria-labelledby="Erik">
-                <div class="char-left Erik">
+                <div class="char-desc Erik">
                 <div class="char-img-wrap">
                     <figure class="char-stage">
                         <img src="assets/imgs/characters/erik.webp" alt="Erik" loading="lazy">
@@ -297,23 +399,50 @@
                         Celio can't take his eyes (or his mind) off him.</p>
                 </div>
                 </div>
-                <div class="char-right">
-                    <div class="infobox">
-                        <p>Age: <span class="infoLight">Unkown, looks around 40</span></p>
-                        <p>Birthday: <span class="infoLight">Unkown</span></p>
-                        <p>Height: <span class="infoLight">185cm</span></p>
-                        <p>Weight: <span class="infoLight">70-75kg</span></p>
-                        <p>Accent: <span class="infoLight">Slightly British</span></p>
-                        <p>Career: <span class="infoLight">Culinary/Hotel Critic</span></p>
-                        <p>Interested in: <span class="infoLight">All genders</span></p>
-                        <p>Knows how to swim: <span class="infoLight">Yes</span></p>
-                        <p> D-size: <span class="infoLight">30cm/11.8″</span></p>
+                <div class="char-attr">
+                <dl class="infobox">
+                    <div>
+                        <dt>Age:</dt>
+                        <dd><span class="infoLight">Unkown, looks around 40</span></dd>
                     </div>
+                    <div>
+                        <dt>Birthday:</dt>
+                        <dd><span class="infoLight">Unkown</span></dd>
+                    </div>
+                    <div>
+                        <dt>Height:</dt>
+                        <dd><span class="infoLight">185 cm</span></dd>
+                    </div>
+                    <div>
+                        <dt>Weight:</dt>
+                        <dd><span class="infoLight">70-75 kg</span></dd>
+                    </div>
+                    <div>
+                        <dt>Accent:</dt>
+                        <dd><span class="infoLight">Slightly British</span></dd>
+                    </div>
+                    <div>
+                        <dt>Career</dt>
+                        <dd><span class="infoLight">Culinary / Hotel Critic</span></dd>
+                    </div>
+                    <div>
+                        <dt>Interested in:</dt>
+                        <dd><span class="infoLight">All genders</span></dd>
+                    </div>
+                    <div>
+                        <dt>Knows how to swim:</dt>
+                        <dd><span class="infoLight">Yes</span></dd>
+                    </div>
+                    <div>
+                        <dt>D-size</dt>
+                        <dd><span class="infoLight">30 cm / 11.8″</span></dd>
+                    </div>
+                </dl>
                     <div class="dpic"><img class="DickPic" src="assets/imgs/characters/DPics/ericPic.webp" alt="Erik's dick" loading="lazy"></div>
             </div>
             </article>
             <article class="char-card Erik" aria-labelledby="The-Other-Erik">
-                <div class="char-left Erik">
+                <div class="char-desc Erik">
                 <div class="char-img-wrap">
                     <figure class="char-stage">
                         <img src="assets/imgs/characters/deric.webp" alt="Erik" loading="lazy">
@@ -327,26 +456,53 @@
                         difference in his personality.</p>
                 </div>
                 </div>
-                <div class="char-right">
-                    <div class="infobox">
-                        <p>Age: <span class="infoLight">Unkown, looks around 40</span></p>
-                        <p>Birthday: <span class="infoLight">Unkown</span></p>
-                        <p>Height: <span class="infoLight">185cm</span></p>
-                        <p>Weight: <span class="infoLight">70-75kg</span></p>
-                        <p>Accent: <span class="infoLight">Slightly British</span></p>
-                        <p>Career: <span class="infoLight">Military/Unkown</span></p>
-                        <p>Interested in: <span class="infoLight">Unkown</span></p>
-                        <p>Knows how to swim: <span class="infoLight">Unkown</span></p>
-                        <p> D-size: <span class="infoLight">Unkown</span></p>
-                    </div>
+                <div class="char-attr">
+                    <dl class="infobox">
+                        <div>
+                            <dt>Age:</dt>
+                            <dd><span class="infoLight">Unkown, looks around 40</span></dd>
+                        </div>
+                        <div>
+                            <dt>Birthday:</dt>
+                            <dd><span class="infoLight">Unkown</span></dd>
+                        </div>
+                        <div>
+                            <dt>Height:</dt>
+                            <dd><span class="infoLight">185 cm</span></dd>
+                        </div>
+                        <div>
+                            <dt>Weight:</dt>
+                            <dd><span class="infoLight">70-75 kg</span></dd>
+                        </div>
+                        <div>
+                            <dt>Accent:</dt>
+                            <dd><span class="infoLight">Slightly British</span></dd>
+                        </div>
+                        <div>
+                            <dt>Career</dt>
+                            <dd><span class="infoLight">Military / Unkown</span></dd>
+                        </div>
+                        <div>
+                            <dt>Interested in:</dt>
+                            <dd><span class="infoLight">Unkown</span></dd>
+                        </div>
+                        <div>
+                            <dt>Knows how to swim:</dt>
+                            <dd><span class="infoLight">Unkown</span></dd>
+                        </div>
+                        <div>
+                            <dt>D-size</dt>
+                            <dd><span class="infoLight">Unkown</span></dd>
+                        </div>
+                    </dl>
                     <div class="dpic"><img class="DickPic" src="assets/imgs/characters/DPics/mysteryPic.webp" alt="Dark Erik's dick" loading="lazy"></div>
             </div>
             </article>
             <article class="char-card Edhel" aria-labelledby="Edhel">
-                <div class="char-left Edhel">
+                <div class="char-desc Edhel">
                 <div class="char-img-wrap">
                     <figure class="char-stage">
-                        <img src="assets/imgs/characters/edhel.webp" alt="Edhel" loading="lazy" class="edhelFix">
+                        <img src="assets/imgs/characters/edhel.webp" alt="Edhel" loading="lazy" id="edhelpicfix">
                     </figure>
                 </div>
                 <div class="char-info">
@@ -357,25 +513,49 @@
                     </p>
                 </div>
                 </div>
-                <div class="char-right">
-                    <div class="infobox accentless">
-                        <p>Age: <span class="infoLight">25</span></p>
-                        <p>Birthday: <span class="infoLight">October 12th</span></p>
-                        <p>Height: <span class="infoLight">170cm</span></p>
-                        <p>Weight: <span class="infoLight">65-70kg</span></p>
-                        <p>Career: <span class="infoLight">Unkown</span></p>
-                        <p>Interested in: <span class="infoLight">Unkown</span></p>
-                        <p>Knows how to swim: <span class="infoLight">Yes</span></p>
-                        <p> D-size: <span class="infoLight">Unkown</span></p>
-                    </div>
+                <div class="char-attr">
+                    <dl class="infobox accentless">
+                        <div>
+                            <dt>Age:</dt>
+                            <dd><span class="infoLight">25</span></dd>
+                        </div>
+                        <div>
+                            <dt>Birthday:</dt>
+                            <dd><span class="infoLight">October 12th</span></dd>
+                        </div>
+                        <div>
+                            <dt>Height:</dt>
+                            <dd><span class="infoLight">170 cm</span></dd>
+                        </div>
+                        <div>
+                            <dt>Weight:</dt>
+                            <dd><span class="infoLight">65-70 kg</span></dd>
+                        </div>
+                        <div>
+                            <dt>Career</dt>
+                            <dd><span class="infoLight">Unkown</span></dd>
+                        </div>
+                        <div>
+                            <dt>Interested in:</dt>
+                            <dd><span class="infoLight">Unkown</span></dd>
+                        </div>
+                        <div>
+                            <dt>Knows how to swim:</dt>
+                            <dd><span class="infoLight">Yes</span></dd>
+                        </div>
+                        <div>
+                            <dt>D-size</dt>
+                            <dd><span class="infoLight">Unkown</span></dd>
+                        </div>
+                    </dl>
                     <div class="dpic"><img class="DickPic" src="assets/imgs/characters/DPics/mysteryPic.webp" alt="Edhel's dick" loading="lazy"></div>
                 </div>
             </article>
             <article class="char-card Greg" aria-labelledby="Gregory">
-                <div class="char-left Greg">
+                <div class="char-desc Greg">
                 <div class="char-img-wrap">
                     <figure class="char-stage">
-                        <img src="assets/imgs/characters/greg.webp" alt="Gregory" class="gregpicfix" loading="lazy">
+                        <img src="assets/imgs/characters/greg.webp" alt="Gregory" id="gregpicfix" loading="lazy">
                     </figure>
                 </div>
                 <div class="char-info">
@@ -384,18 +564,45 @@
                     <p>A relaxed easy-going dude. His surfing skills are only surpassed by his ability to spout the most unbearable puns.</p>
                 </div>
                 </div>
-                <div class="char-right">
-                    <div class="infobox greginfo">
-                        <p>Age: <span class="infoLight">25</span></p>
-                        <p>Birthday: <span class="infoLight">September 8th</span></p>
-                        <p>Height: <span class="infoLight">178cm</span></p>
-                        <p>Weight: <span class="infoLight">70-75kg</span></p>
-                        <p>Accent: <span class="infoLight">Australian</span></p>
-                        <p>Career: <span class="infoLight">Surf instructor</span></p>
-                        <p>Interested in: <span class="infoLight">Unkown</span></p>
-                        <p>Knows how to swim: <span class="infoLight">Yes</span></p>
-                        <p> D-size: <span class="infoLight">10cm/3.9''</span></p>
-                    </div>
+                <div class="char-attr">
+                <dl class="infobox">
+                        <div>
+                            <dt>Age:</dt>
+                            <dd><span class="infoLight">25</span></dd>
+                        </div>
+                        <div>
+                            <dt>Birthday:</dt>
+                            <dd><span class="infoLight">September 8th</span></dd>
+                        </div>
+                        <div>
+                            <dt>Height:</dt>
+                            <dd><span class="infoLight">178 cm</span></dd>
+                        </div>
+                        <div>
+                            <dt>Weight:</dt>
+                            <dd><span class="infoLight">70-75 kg</span></dd>
+                        </div>
+                        <div>
+                            <dt>Accent:</dt>
+                            <dd><span class="infoLight">Australian</span></dd>
+                        </div>
+                        <div>
+                            <dt>Career</dt>
+                            <dd><span class="infoLight">Surf instructor</span></dd>
+                        </div>
+                        <div>
+                            <dt>Interested in:</dt>
+                            <dd><span class="infoLight">Unkown</span></dd>
+                        </div>
+                        <div>
+                            <dt>Knows how to swim:</dt>
+                            <dd><span class="infoLight">Yes</span></dd>
+                        </div>
+                        <div>
+                            <dt>D-size</dt>
+                            <dd><span class="infoLight">10 cm / 3.9″</span></dd>
+                        </div>
+                    </dl>
                     <div class="dpic"><img class="DickPic" src="assets/imgs/characters/DPics/gregPic.webp" alt="Gregory's dick" loading="lazy"></div>
                 </div>
             </article>
@@ -408,9 +615,9 @@
         <p>Here I will post all the aditional art, drawings, study sketches and designs I create for this series. <br> Much of the nsfw art here have been commissioned by the community!</p>
         <div class="galbtn-wrap"><button id="shownsfw" class="btn-nsfwgallery">Show NSFW</button></div>
     </header>
-    <div class="fangallery-columns">
+    <div class="image-board">
         <div class="fanart-item gallery-item">
-        <img src="assets/imgs/gallery/coverConcept.webp" width="1322" height="2000" loading="lazy" width="1" alt="Cover concept"  class="galpic" draggable="false">
+        <img src="assets/imgs/gallery/coverConcept.webp" width="1322" height="2000" loading="lazy" alt="Cover concept"  class="galpic" draggable="false">
         <div class="fanart-hover">
             <p>Cover concept</p>
         </div>
@@ -804,7 +1011,7 @@
             <p>Ticklish</p>
         </div>
         </div>
-                <div class="fanart-item gallery-item btn-hidden nsfw-item">
+        <div class="fanart-item gallery-item btn-hidden nsfw-item">
         <img src="assets/imgs/placeHolder.webp" data-src="assets/imgs/gallery/nsfw/hugglestrio-end.webp" width="3508" height="2467" alt="Backstage with a friend" loading="lazy"  class="galpicnsfw" draggable="false">
         <div class="fanart-hover">
             <p>Backstage with a friend</p>
@@ -987,7 +1194,7 @@
         <p>Artwork made by the community inspired by <strong>Cats Love Water</strong>.  
         <br>Thank you for your contributions!</p>
     </header>
-    <div class="fangallery-columns">
+    <div class="image-board">
         <div class="fanart-item">
         <img src="assets/imgs/fanart/stovenfan.webp" width="1367" height="1128" alt="Fanart by Stoven" class="fanpic" draggable="false" loading="lazy">
         <div class="fanart-hover">
@@ -1052,7 +1259,7 @@
         </div>
         </div>
         <div class="fanart-item">
-        <img src="assets/imgs/fanart/joojoofan.webp"width="1450" height="1014"  alt="Fanart by JooJoo" class="fanpic" draggable="false" loading="lazy">
+        <img src="assets/imgs/fanart/joojoofan.webp" width="1450" height="1014"  alt="Fanart by JooJoo" class="fanpic" draggable="false" loading="lazy">
         <div class="fanart-hover">
             <img class="fanpfp" src="assets/imgs/fanart/pfps/joojoopfp.gif" alt="JooJoo profile" draggable="false" loading="lazy">
             <a href="https://furaffinity.net/user/joojoo/" target="_blank" rel="noopener noreferrer">JooJoo</a>
@@ -1172,17 +1379,17 @@
         <div class="drama-body"> 
         <div class="drama-store">
             <article class="drama-card">
-                <img src="assets/imgs/comic/covers/clw1.webp" loading="lazy" alt="Cats Love Water: Chapter 1">
+                <img src="assets/imgs/comic/covers/clw1.webp" width="840" height="1280" loading="lazy" alt="Cats Love Water: Chapter 1">
                 <h2>Cats Love Water: <br> Chapter 1</h2>
                 <a href="https://nekoboy.gumroad.com/l/clwch1?layout=profile" target="_blank" rel="noopener noreferrer" class="buy-btn">Buy Chapter</a>
             </article>
             <article class="drama-card">
-                <img src="assets/imgs/comic/covers/clw2.webp" loading="lazy" alt="Cats Love Water: Chapter 2">
+                <img src="assets/imgs/comic/covers/clw2.webp" width="840" height="1280" loading="lazy" alt="Cats Love Water: Chapter 2">
                 <h2>Cats Love Water: <br> Chapter 2</h2>
                 <a href="https://nekoboy.gumroad.com/l/clwch2?layout=profile" target="_blank" rel="noopener noreferrer" class="buy-btn">Buy Chapter</a>
             </article>
             <article class="drama-card">
-                <img src="assets/imgs/comic/covers/clw3.webp" loading="lazy" alt="Cats Love Water: Chapter 3">
+                <img src="assets/imgs/comic/covers/clw3.webp" width="840" height="1280" loading="lazy" alt="Cats Love Water: Chapter 3">
                 <h2>Cats Love Water: <br> Chapter 3</h2>
                 <a href="https://nekoboy.gumroad.com/l/clwch3?layout=profile" target="_blank" rel="noopener noreferrer" class="buy-btn">Buy Chapter</a>
             </article>
@@ -1196,29 +1403,32 @@
             </div>
         </div>
         <aside class="drama-va">
-                <div class="voice-actors">
+            <div class="voice-actors">
                 <h3>Thanks to our amazing Voice Actors:</h3>
-                <div class="drama-credits">
-                    <p><a href="https://x.com/TheChrisPavon" target="_blank" class="credit-link"><strong>@TheChrisPavon</strong></a> <span class="portraying">portraying</span> Arno</p>
-                    <p><a href="https://x.com/TheRealMintyAce" target="_blank" class="credit-link"><strong>@TheRealMintyAce</strong></a> <span class="portraying">portraying</span> Celio</p>
-                    <p><a href="https://x.com/VirtualKohai" target="_blank" class="credit-link"><strong>@VirtualKohai</strong></a> <span class="portraying">portraying</span> Cato</p>
-                    <p><a href="https://www.furaffinity.net/user/spazzlehusky/" target="_blank" class="credit-link"><strong>@spazzlehusky</strong></a> <span class="portraying">portraying</span> Dick</p>
-                    <p><a href="https://x.com/DropTrowVA" target="_blank" class="credit-link"><strong>@DropTrowVA</strong></a> <span class="portraying">portraying</span> Eric</p>
-                    <p><a href="https://x.com/its_PatrickJV" target="_blank" class="credit-link"><strong>@its_PatrickJV</strong></a> <span class="portraying">portraying</span> Reik</p>
-                    <p><a href="https://www.furaffinity.net/user/dungeonkills/" target="_blank" class="credit-link"><strong>@AubyThePirate</strong></a> <span class="portraying">portraying</span> Gregory</p>
-                    <p><a href="https://x.com/Galaxiimira" target="_blank" class="credit-link"><strong>@Galaxiimira</strong></a> <span class="portraying">portraying</span> Nera</p>
-                    <p><a href="https://x.com/MacStarVA" target="_blank" class="credit-link"><strong>@MacStarVA</strong></a> <span class="portraying">portraying</span> Sylvanna</p>
-                </div>
-                </div>
-                <div class="special-thanks">
+                <ul class="drama-credits">
+                    <li><a href="https://x.com/TheChrisPavon" target="_blank" class="credit-link"><strong>@TheChrisPavon</strong></a> <span class="portraying">portraying</span> Arno</li>
+                    <li><a href="https://x.com/TheRealMintyAce" target="_blank" class="credit-link"><strong>@TheRealMintyAce</strong></a> <span class="portraying">portraying</span> Celio</li>
+                    <li><a href="https://x.com/VirtualKohai" target="_blank" class="credit-link"><strong>@VirtualKohai</strong></a> <span class="portraying">portraying</span> Cato</li>
+                    <li><a href="https://www.furaffinity.net/user/spazzlehusky/" target="_blank" class="credit-link"><strong>@spazzlehusky</strong></a> <span class="portraying">portraying</span> Dick</li>
+                    <li><a href="https://x.com/DropTrowVA" target="_blank" class="credit-link"><strong>@DropTrowVA</strong></a> <span class="portraying">portraying</span> Eric</li>
+                    <li><a href="https://x.com/its_PatrickJV" target="_blank" class="credit-link"><strong>@its_PatrickJV</strong></a> <span class="portraying">portraying</span> Reik</li>
+                    <li><a href="https://www.furaffinity.net/user/dungeonkills/" target="_blank" class="credit-link"><strong>@AubyThePirate</strong></a> <span class="portraying">portraying</span> Gregory</li>
+                    <li><a href="https://x.com/Galaxiimira" target="_blank" class="credit-link"><strong>@Galaxiimira</strong></a> <span class="portraying">portraying</span> Nera</li>
+                    <li><a href="https://x.com/MacStarVA" target="_blank" class="credit-link"><strong>@MacStarVA</strong></a> <span class="portraying">portraying</span> Sylvanna</li>
+                </ul>
+            </div>
+            <div class="special-thanks">
                  <h3>Special Thanks to:</h3>
-                 <div class="drama-credits">
-                    <p>Our Directors <br> <a href="https://x.com/LoneWolfTheta" class="credit-link" target="_blank"><strong>@LoneWolfTheta</strong></a> & <strong><a href="https://x.com/DropTrowVA" target="_blank" class="credit-link">@DropTrowVA</a></strong></p>
-                    <p style="height: 4.2rem;">Music by <br> <a href="https://x.com/NekoBoyOfficial" target="_blank" class="credit-link"><strong>@NekoBoyOfficial</strong></a></p>
-                    <p>SFX by <br> <strong>SMCWDD</strong> & <a href="https://x.com/NekoBoyOfficial" target="_blank" class="credit-link"><strong>@NekoBoyOfficial</strong></a></p>
-                  </div>
+                    <dl class="drama-credits">
+                        <dt>Our Directors</dt>
+                        <dd><a href="https://x.com/LoneWolfTheta" class="credit-link" target="_blank"><strong>@LoneWolfTheta</strong></a> & <strong><a href="https://x.com/DropTrowVA" target="_blank" class="credit-link">@DropTrowVA</a></strong></dd>
+                        <dt>Music by</dt>
+                        <dd><a href="https://x.com/NekoBoyOfficial" target="_blank" class="credit-link"><strong>@NekoBoyOfficial</strong></a></dd>
+                        <dt>SFX by</dt>
+                        <dd><strong>SMCWDD</strong> & <a href="https://x.com/NekoBoyOfficial" target="_blank" class="credit-link"><strong>@NekoBoyOfficial</strong></a></dd>
+                    </dl>
                 <h3 class="nekothx">Thanks to <a href="https://x.com/NekoBoyOfficial" target="_blank" class="credit-link"><span style="font-weight: bold;">@NekoBoyOfficial</span></a> for their amazing managment of this project!</h3>
-                </div>
+            </div>
         </aside>
         </div>
     </section>
@@ -1227,7 +1437,7 @@
         <h1>Not a Big Deal - CLW special</h1>
         <p>This comic won't be as detailed and meticulous like the main CLW it was supposed to be a fun side project, so I'm being quite experimental with it, having fun with different techniques, using a lot of 3d models and special brushes for backgrounds and being loose in the drawings. I hope you like it. This comic will continue parallel to the last chapter of CLW coming soon.</p>
     </header>
-            <div id="comicModalNABD" class="comic-modalNABD" role="dialog" aria-modal="true" aria-hidden="true">
+        <div id="comicModalNABD" class="comic-modalNABD" role="dialog" aria-modal="true" aria-hidden="true">
             <div class="comic-modal-backdropNABD" data-close></div>
             <div class="comic-readerNABD" role="document">
                 <header class="reader-header">
@@ -1261,107 +1471,116 @@
         </div>
     </section>
     <section id="bio">
-        <div class="bio-wrapper">
+        <article class="about">
         <div class="about-me">
-            <div class="about-me-right">
-            <div class="about-me-info">
-                <img class="peripic" src="assets/imgs/bio/deersona.webp" alt="Peritian's fursona" draggable="false">
-                    <h1>About Me</h1>
-                    <p>Hi! I'm <a href="https://peritian.carrd.co/" target="_blank">Peritian</a>, 39 years old, currently living in Argentina. 
-                        I love drawing as a hobby as much as for work, And despite I enjoy drawing nsfw content the most, I'm open to anything.</p>
-                    <p> I have been drawing since I have memory but I started to take it seriously when I was 14. From then on, since my first DA account, 
-                        through my FA account and commission work, I've tavelled a long path. I'm really happy that I learned a lot of important things about drawing and comic industry, character designs and general art knoweledge.</p>
-                    <p>
-                    I've participated in long term projects for <a href="https://www.hardblush.com/" target="_blank">Hardblush</a>, <a href="https://wetblush.com/" target="_blank">Wetblush</a>, and <a href="https://www.clubstripes.com/" target="_blank">Clubstripes</a>,
-                    and other adult-anthro theme paysites, since I've always enjoyed adult work. Now I'm happy to share this comic with you, which started as a personal project and has now come to life. Supporters on current and former platforms are the ones who made this posible and thanks to them I can dedicate more time to this project, I can produce more art and make my worlds come true. </p>
-                    <p><em><strong>Thank you so much, and I hope you enjoy and keep supporting me in the future.</strong></em>
-                    
-                    </p>
-            </div>
-            <div class="about-comic-info">
-                    <h1>About This Comic</h1>
-                    <p>Arno and Celio were originally born in Hardblush, as main protagonists of a pinup with a summer-ish theme. Since I liked their design and the fact that they were a pair of interesting characters back then, I decided to keep drawing them in more pinups and vignettes. After drawing them for some time, I wanted them to have their own personal story, and that will be my first attempt to do a long-run project, with a story that may continue beyond a one-shot and more than 10 pages. A lot of characters and situations added to this will end in something interesting, I hope! and I'll do my best to make it true. 
-                    I hope you enjoy it!</p>
-            </div>
-            </div>
+        <figure class="peripic">
+            <img src="assets/imgs/bio/deersona.webp"
+                width="3056"
+                height="5717"
+                alt="Peritian's Fursona"
+                draggable="false">
+                <figcaption>Peritian's Fursona</figcaption>
+        </figure>
+            <h2>About Me</h2>
+            <p>Hi! I'm <a href="https://peritian.carrd.co/" target="_blank">Peritian</a>, 39 years old, currently living in Argentina. 
+                I love drawing as a hobby as much as for work, And despite I enjoy drawing nsfw content the most, I'm open to anything.</p>
+            <p> I have been drawing since I have memory but I started to take it seriously when I was 14. From then on, since my first DA account, 
+                through my FA account and commission work, I've tavelled a long path. I'm really happy that I learned a lot of important things about drawing and comic industry, character designs and general art knoweledge.</p>
+            <p>
+            I've participated in long term projects for <a href="https://www.hardblush.com/" target="_blank">Hardblush</a>, <a href="https://wetblush.com/" target="_blank">Wetblush</a>, and <a href="https://www.clubstripes.com/" target="_blank">Clubstripes</a>,
+            and other adult-anthro theme paysites, since I've always enjoyed adult work. Now I'm happy to share this comic with you, which started as a personal project and has now come to life. Supporters on current and former platforms are the ones who made this posible and thanks to them I can dedicate more time to this project, I can produce more art and make my worlds come true. </p>
+            <p><em><strong>Thank you so much, and I hope you enjoy and keep supporting me in the future.</strong></em>    
+            </p>
         </div>
-
-        <div class="bio-links">
-            <h1>Links & Support</h1>
-            <div class="links-section">
-                <h2>Check out more of my work:</h2>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/falogo.png" alt="FA" loading="lazy" draggable="false">
-                    <a href="https://www.furaffinity.net/user/peritian/" rel="noopener noreferrer" target="_blank">Furaffinity</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/xlogo.png" alt="TW" loading="lazy"  draggable="false">
-                    <a href="https://x.com/Peritian" rel="noopener noreferrer" target="_blank">Twitter</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/bslogo.png" alt="BS" loading="lazy" draggable="false">
-                    <a href="https://bsky.app/profile/peritian.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/iglogo.png" alt="IG" draggable="false">
-                    <a href="https://www.instagram.com/peritian/" rel="noopener noreferrer" target="_blank">Instagaram</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/tglogo.png" alt="TG" loading="lazy" draggable="false">
-                     <a href="https://t.me/+61xOBmhynb03YjEx" rel="noopener noreferrer" target="_blank">Telegram</a>
-                </div>
-            </div>
-            <div class="links-section">
-                <h2>Support my work:</h2>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/sslogo.png" alt="SS" loading="lazy"  draggable="false">
-                    <a href="https://subscribestar.adult/peritian" target="_blank">Subscribestar</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/kflogo.png" alt="KF" loading="lazy" draggable="false">
-                    <a href="https://ko-fi.com/peritian" target="_blank">KoFi</a>
-                </div>
-            </div>
-            <div class="links-section">
-                <h2>Merchandise & Art packs:</h2>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/bwplaceholder.png" alt="BW" draggable="false" loading="lazy">
-                    <a href="https://www.bewere.net/order.php?s=peritian" rel="noopener noreferrer" target="_blank">Bewere Market</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/rblogo.png" alt="RB" loading="lazy"  draggable="false">
-                    <a href="https://www.redbubble.com/people/Peritian/shop" rel="noopener noreferrer" target="_blank">Redbubble</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/cbrlogo.png" alt="CB" loading="lazy" draggable="false">
-                    <a href="https://cubebrush.co/emperitian" rel="noopener noreferrer" target="_blank">Cubebrush</a>
-                </div>
-            </div>
-            <div class="links-section">
-                <h2>Commission information:</h2>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/priceslogo.png" loading="lazy" alt="PR" draggable="false">
-                    <a href="https://peritian.carrd.co/#section01" rel="noopener noreferrer" target="_blank">Prices</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/infologo.png" loading="lazy" alt="I" draggable="false">
-                    <a href="https://peritian.carrd.co/#section02" rel="noopener noreferrer" target="_blank">Terms of Service</a>
-                </div>
-                <div class="link-wrap">
-                    <img src="assets/imgs/bio/trlogo.png" loading="lazy" alt="TR" draggable="false">
-                    <a href="https://trello.com/b/29bsqzLq/commissions" rel="noopener noreferrer" target="_blank">Trello</a>
-                </div>
-            </div>
+        <div class="about-comic">
+            <h2>About This Comic</h2>
+            <p>Arno and Celio were originally born in Hardblush, as main protagonists of a pinup with a summer-ish theme. Since I liked their design and the fact that they were a pair of interesting characters back then, I decided to keep drawing them in more pinups and vignettes. After drawing them for some time, I wanted them to have their own personal story, and that will be my first attempt to do a long-run project, with a story that may continue beyond a one-shot and more than 10 pages. A lot of characters and situations added to this will end in something interesting, I hope! and I'll do my best to make it true. 
+            I hope you enjoy it!</p>
         </div>
-        </div>
+        </article>
+        <aside class="bio-links">
+            <h2>Links & Support</h2>
+            <div aria-labelledby="social-heading">
+                <h3 id="social-heading" >Check out more of my work:</h3>
+                <ul class="links-section">
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/falogo.png" alt="" width="40" height="40" loading="lazy" draggable="false" aria-hidden="true">
+                    <a href="https://www.furaffinity.net/user/peritian/" rel="noopener noreferrer" target="_blank" aria-label="Furaffinity">Furaffinity</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/xlogo.png" alt="" width="40" height="40" loading="lazy"  draggable="false" aria-hidden="true">
+                    <a href="https://x.com/Peritian" rel="noopener noreferrer" target="_blank" aria-label="Twitter">Twitter</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/bslogo.png" alt="" width="40" height="40" loading="lazy" draggable="false" aria-hidden="true">
+                    <a href="https://bsky.app/profile/peritian.bsky.social" rel="noopener noreferrer" target="_blank" aria-label="Bluesky">Bluesky</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/iglogo.png" alt="" width="40" height="40" draggable="false" aria-hidden="true">
+                    <a href="https://www.instagram.com/peritian/" rel="noopener noreferrer" target="_blank" aria-label="Instagram">Instagram</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/tglogo.png" alt="" width="40" height="40" loading="lazy" draggable="false" aria-hidden="true">
+                     <a href="https://t.me/+61xOBmhynb03YjEx" rel="noopener noreferrer" target="_blank" aria-label="Telegram">Telegram</a>
+                </li>
+                </ul>
+            </div>
+            <div aria-labelledby="support-heading">
+            <h3 id="support-heading">Support my work:</h3>
+            <ul class="links-section">
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/sslogo.png" alt="" width="40" height="40" loading="lazy"  draggable="false" aria-hidden="true">
+                    <a href="https://subscribestar.adult/peritian" target="_blank" aria-label="Subscribestar" >Subscribestar</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/kflogo.png" alt="" width="40" height="40" loading="lazy" draggable="false" aria-hidden="true">
+                    <a href="https://ko-fi.com/peritian" target="_blank" aria-label="KoFi">KoFi</a>
+                </li>
+            </ul>
+            </div>
+            <div aria-labelledby="merch-heading">
+            <ul class="links-section">
+                <h3 id="merch-heading">Merchandise & Art packs:</h3>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/bwplaceholder.png" alt="" width="40" height="40" draggable="false" loading="lazy" aria-hidden="true">
+                    <a href="https://www.bewere.net/order.php?s=peritian" rel="noopener noreferrer" target="_blank" aria-label="bewere Market" >Bewere Market</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/rblogo.png" alt="" width="40" height="40" loading="lazy"  draggable="false" aria-hidden="true">
+                    <a href="https://www.redbubble.com/people/Peritian/shop" rel="noopener noreferrer" target="_blank" aria-label="Redbubble" >Redbubble</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/cbrlogo.png" alt="" width="40" height="40" loading="lazy" draggable="false" aria-hidden="true">
+                    <a href="https://cubebrush.co/emperitian" rel="noopener noreferrer" target="_blank" aria-label="Cubebrush" >Cubebrush</a>
+                </li>
+            </ul>
+            </div>
+            <div aria-labelledby="commission-heading">
+            <h3 id="commission-heading">Commission information:</h3>
+            <ul class="links-section">
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/priceslogo.png" loading="lazy" alt="" width="40" height="40" draggable="false" aria-hidden="true">
+                    <a href="https://peritian.carrd.co/#section01" rel="noopener noreferrer" target="_blank" aria-label="Prices" >Prices</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/infologo.png" loading="lazy" alt="" width="40" height="40" draggable="false" aria-hidden="true">
+                    <a href="https://peritian.carrd.co/#section02" rel="noopener noreferrer" target="_blank" aria-label="Terms of Service" >Terms of Service</a>
+                </li>
+                <li class="link-wrap">
+                    <img src="assets/imgs/bio/trlogo.png" loading="lazy" alt="" width="40" height="40" draggable="false" aria-hidden="true">
+                    <a href="https://trello.com/b/29bsqzLq/commissions" rel="noopener noreferrer" target="_blank" aria-label="Trello" >Trello</a>
+                </li>
+            </ul>
+            </div>
+        </aside>
     </section>
     <nav id="navContainer">
         <ul class="navbar">
             <li><a href="#home" draggable="false">Home</a></li>
             <li><a id="comicnav" href="#comic" draggable="false">Comic</a></li>
             <li><a href="#characters" draggable="false">Characters</a></li>
-            <li><a id="galleryBar" href="#gallery" draggable="false">Gallery</a></li>
-            <li><a id="fanGalleryBar" href="#fanart" draggable="false">Fanart</a></li>
+            <li><a href="#gallery" draggable="false">Gallery</a></li>
+            <li><a href="#fanart" draggable="false">Fanart</a></li>
             <li><a href="#audiodrama" draggable="false">Audio Drama</a></li>
             <li><a href="#halloween-special" draggable="false">Halloween Special</a></li>
             <li><a href="#bio" draggable="false">About me</a></li>
@@ -1373,14 +1592,14 @@
             <li><a href="#home" draggable="false">Home</a></li>
             <li><a id="comicnav" href="#comic" draggable="false">Comic</a></li>
             <li><a href="#characters" draggable="false">Characters</a></li>
-            <li><a id="galleryBar" href="#gallery" draggable="false">Gallery</a></li>
-            <li><a id="fanGalleryBar" href="#fanart" draggable="false">Fanart</a></li>
+            <li><a href="#gallery" draggable="false">Gallery</a></li>
+            <li><a href="#fanart" draggable="false">Fanart</a></li>
             <li><a href="#audiodrama" draggable="false">Audio Drama</a></li>
             <li><a href="#halloween-special" draggable="false">Halloween Special</a></li>
             <li><a href="#bio" draggable="false">About me</a></li>
         </ul>
     </nav>
-    </div>
+    </main>
 <script src="comic-reader.js" defer></script>
 <div id="imageModal" class="modal" aria-hidden="true" role="dialog" aria-label="Image viewer">z
   <button class="close" aria-label="Close modal">&times;</button>
@@ -1389,7 +1608,7 @@
   <button class="nav next" aria-label="Next image">&#10095;</button>
 
   <div class="modal-center">
-    <img class="modal-content" id="modalImage" alt="">
+    <img src="assets/imgs/placeHolder.webp" class="modal-content" id="modalImage" alt="">
     <div id="modalCaption" class="modal-caption"></div>
   </div>
 </div>

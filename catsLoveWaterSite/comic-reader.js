@@ -1094,7 +1094,9 @@ function openReader() {
     const siteContent = document.getElementById('site-content');
     comicModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
+
     siteContent.classList.add('inactive');
+    siteContent.setAttribute('inert', ''); // hide main element in accesiblity tree
 }
 
 function closeReader() {
@@ -1103,6 +1105,8 @@ function closeReader() {
     document.body.classList.remove('modal-open');
     siteContent.classList.remove('inactive');
     document.exitFullscreen?.();
+
+    siteContent.removeAttribute('inert');
 }
 
 closeBtnC.addEventListener('click', closeReader);

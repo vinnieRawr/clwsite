@@ -105,11 +105,11 @@ document.addEventListener("click", e => {
     const prevBtn = document.querySelector(".prev");
     const nextBtn = document.querySelector(".next");
     
-const nsfwBtn = document.getElementById("shownsfw");
-const nsfwItems = document.querySelectorAll(".nsfw-item");
-const sfwItems = document.querySelectorAll(".gallery-item:not(.nsfw-item)");
+    const nsfwBtn = document.getElementById("shownsfw");
+    const nsfwItems = document.querySelectorAll(".nsfw-item");
+    const sfwItems = document.querySelectorAll(".gallery-item:not(.nsfw-item)");
 
-let showingNSFW = false;
+    let showingNSFW = false;
 
     nsfwBtn.addEventListener('click', () => {
         showingNSFW = !showingNSFW;
@@ -147,7 +147,7 @@ let showingNSFW = false;
 
     let touchStartX = 0;
     let touchEndX = 0;
-    const SWIPE_THRESHOLD = 50; // px
+    const SWIPE_THRESHOLD = 50;
 
     const modalCenter = document.querySelector('.modal-center');
 
