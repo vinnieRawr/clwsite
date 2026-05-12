@@ -1084,7 +1084,7 @@ dl.drama-credits {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-bottom: 1rem;
+  padding-bottom: 1rem !important;
 }
 
 
