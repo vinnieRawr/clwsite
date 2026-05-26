@@ -722,7 +722,7 @@ font-size: 1.3rem;
 .infobox div {
   font-weight: lighter;
   margin: 0;
-  padding: 0.78rem 1.25rem;
+  padding: 0.78rem 0.75rem;
   white-space: nowrap;
   color: #93a0b8;
   display: flex;
@@ -732,8 +732,11 @@ font-size: 1.3rem;
   border-bottom: 2px solid var(--darkBorder);
   margin: 0;
 }
+.infobox dd {
+  margin: 0;
+}
 .dickinfo div{
-  padding: 1.25rem;
+  padding: 1.25rem 0.75rem;
 }
 .infoLight{
   color: #d6d6d6
@@ -1475,7 +1478,7 @@ dl.drama-credits {
   max-width: 1600px; 
 }
 .accentless div{
-  padding: 0.8775rem;
+  padding: 0.8775rem 0.75rem;
 }
 
 }
