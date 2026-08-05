@@ -435,6 +435,7 @@
                 'assets/imgs/comic/chap8/822.webp',
                 'assets/imgs/comic/chap8/823.webp',
                 'assets/imgs/comic/chap8/824.webp',
+                'assets/imgs/comic/chap8/825.webp',
             ]
         }
     ];
