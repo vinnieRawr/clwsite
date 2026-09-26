@@ -566,6 +566,7 @@
                 'assets/imgs/comic/nabd/nabd23.webp',
                 'assets/imgs/comic/nabd/nabd24.webp',
                 'assets/imgs/comic/nabd/nabd25.webp',
+                'assets/imgs/comic/nabd/nabd26.webp',
             ]
         },
     ];
